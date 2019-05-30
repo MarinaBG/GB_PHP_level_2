@@ -1,6 +1,6 @@
 <?php
 require_once 'config/config.php';
-require_once 'models/model.php';
+
 // подгружаем и активируем авто-загрузчик Twig-а
 require_once 'Twig/Autoloader.php';
 Twig_Autoloader::register();
@@ -13,17 +13,17 @@ try {
   $twig = new Twig_Environment($loader);
   
   // подгружаем шаблон
-  $template = $twig->loadTemplate('big_img.tmpl');
-  
-  // получаем название изображения через get
-  $nameBigImg = $_GET['img'];
+  $template = $twig->loadTemplate('index.tmpl');
 
+  //сканируем директорию с картинками, получаем массив из списка файлов
+  $masPhoto = scandir(PATH_SMALL_IMG);
+  
   // передаём в шаблон переменные и значения
   // выводим сформированное содержание
   $content = $template->render(array(
     'title' => 'GB. Домашнее задание 3. Галерея',
-    'name' => $nameBigImg,
-    'nameImg' => getBigPhoto($connect, $nameBigImg),
+    'photo' => $masPhoto,
+    'pathSmallImg' => PATH_SMALL_IMG,
     'pathBigImg' => PATH_BIG_IMG,
   ));
   echo $content;
