@@ -1,0 +1,74 @@
+html,
+body {
+    height: 100%;
+}
+.container {
+    margin: 0, auto;
+    width: 1000px;
+}
+.requiredField {
+    color: red;
+}
+.form-control.error:focus {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+.error {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+.form-group {
+    margin-top: 30px;
+}
+#dialog{
+    display: none;
+    font-size: 16px;
+}
+.ui-dialog-title {
+    font-size: 20px;
+}
+.ui-dialog-buttonset {
+    font-size: 18px;
+}
+#msg{
+    width: 1110px;
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: #212529;
+}
+.info {
+    max-width: 1200px;
+    margin-top: 30px;
+    padding: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+}
+h1 {
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+}
+#log_out, #checkIn  {
+    margin-top: 30px;
+}
+#check_in{
+    margin-left: 20px;
+}
+.pass{
+    margin-bottom: 50px;
+}
