@@ -1,6 +1,6 @@
 <?php
-require_once ('../config/config.php');
-require_once ("../general/general.php");
+include_once(__DIR__.'../config/config.php');
+include_once(__DIR__.'../general/general.php');
 
 
 $tableNameSql = str_replace("-", "_", ((explode(".", end(explode("/", $_SERVER["PHP_SELF"]))))[0]));
